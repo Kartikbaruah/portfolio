@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - BBC News</title>
+    <link href="normalize.css" rel="stylesheet">
+</head>
+
+<style type="text/css">
+
+    #topbar {
+        width: 1000px;
+        margin: 0 auto;
+        height: 40px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    #logo {
+        margin-top: 8px;
+        width: 100px;
+        float: left;
+        margin-right: 8px;
+    }
+
+    .topbar-section {
+        float: left;
+        border-left: 1px #CCCCCC solid;
+        height: 100%;
+    }
+
+    #signin-image {
+        width:25px;
+        margin: 9px 15px;
+        float: left;
+    }
+
+    #signin-text {
+        font-weight: bold;
+        font-size: 95%;
+        position: relative;
+        top: 12px;
+        padding-right: 40px;
+    }
+
+    #stick {
+        float: left;
+        height: 54px;
+    }
+
+    #bell {
+        height: 25px;
+        margin: 10px 7px ;
+    }
+
+    #bell-div {
+        float: left;
+    }
+
+    .topbar-menu {
+        font-weight: bold;
+        font-size: 95%; 
+        padding: 15px 15px 0 15px;     
+    }
+
+    #arrow {
+        width: 13px;
+        margin-left: 20px;
+    }
+
+    #search-box {
+        background-color: #E4E4E4;
+        border: none;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px;
+        margin: 8px 0 8px 8px;
+        float: left;
+    }
+
+    #magnifying-glass {
+        background-color: #E4E4E4;
+        height: 28px;
+        margin-top: 8px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    #menu-bar-container {
+        border-top: 1px solid #CCCCCC;
+        background-color: #BB1919;
+        width: 100%;
+        height: 85px;   
+    }
+
+    #menu-bar {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        padding: 0px;
+        margin: 0;
+        color: white;
+        font-size: 40px;
+        font-weight: normal;
+        padding-top: 10px;
+        float: left;
+    }
+
+    #local-news {
+        border: 1px #BB4545 solid;
+        float: right;
+        width: 230px;
+        margin: 5px 5px 5px 10px;
+        padding:5px 10px 0 8px;
+    }
+
+    #local-news a {
+        color: white;
+        text-decoration: none;
+        font-size: 28px;
+        position: relative;
+        top:-8px;
+    }
+
+    #local-news a:hover {
+        text-decoration: underline;
+    }
+
+    #local-news img {
+        height: 37px;
+    }
+
+    #menu-bar-2-container {
+        background-color: #A91717;
+        width: 100%;
+    }
+
+    #menu-bar-2 {
+        width: 1050px;
+        margin: 0 auto;
+        height: 40px;
+    }
+
+    #menu-bar-2 a {
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+        border-right: 1px solid #BB4545;
+        font-size: 16px;
+        position: relative;
+        top: 11px;
+    }
+
+    #menu-bar-2 a:hover {
+        text-decoration: underline;
+    }
+
+
+    .no-border {
+        border: none !important;
+    }
+
+    #down-arrow {
+        height: 10px;
+        position: relative;
+        top: 10px;
+    }
+
+    #page-container {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin-top: 30px;
+        font-size: 25px;
+        border-bottom: 3px solid #A91717;
+        width: 128px;
+    }
+
+    h3 a {
+        color: black;
+        font-size: 28px;
+        text-decoration: none;
+    }
+
+    h3 a:hover {
+        color: #1167a8;
+    }
+
+    #artical-summery {
+        color: #5a5a5a;
+        width: 300px;
+        float: left;
+    }
+
+    .clock img {
+        height: 16px;
+        position: relative;
+        top: 1px;
+    }
+
+    #topic-link {
+        text-decoration: none;
+        color: #A91717;
+        border-left: 1px solid #CCCCCC;
+        padding-left: 9px;
+    }
+
+    #artical-summery a:hover {
+        color: #1167a8;
+    }
+
+    .date {
+        padding-right: 10px;
+    }
+
+    #artical-container {
+        float: left;
+        width: 700px;
+        border-right: 1px solid #CCCCCC;
+        padding: 20px;
+    }
+
+    #main-artical-image {
+        width: 400px;   
+    }
+
+    #article-hr {
+        border-top: 1px solid #A91717;
+        width: 50px;
+    }
+
+    .article-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    #explore-more {
+        margin-left: 20px;
+        width: 230px;
+        float: right;
+    }
+
+    h4 {
+        font-family: "PT Serif", serif;
+        font-size: 150%;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .article-side-image {
+        float: left;
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .explore-more-link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;  
+        font-size: 18px;
+    }
+
+    .explore-more-link:hover {
+        color: #1167a8;
+    }
+
+    .side-article {
+        float: right;
+        width: 200px;
+    }
+
+    .article-side-image-1 {
+        float: left;
+        width: 150px;
+        margin-left: 10px;
+    }
+
+
+</style>
+
+
+
+<body>
+
+    <div id="topbar">
+
+        <img id="logo" src="image/bbc-logo.png">
+
+        <div id="signin-div" class="topbar-section">
+
+            <img id="signin-image" src="image/sign-in-logo.png">
+
+            <span id="signin-text">Sign in</span>
+
+        </div>
+
+       <div id="bell-div">
+
+            <img id="stick" src="image/stick.png">
+            <img id="bell" src="image/bell.png">
+
+       </div>  
+        
+    
+        <div class="topbar-section topbar-menu">
+            News   
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            Sport  
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            Weather  
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            iPlayer  
+        </div>
+
+        <div class="topbar-section topbar-menu">
+            TV    
+        </div>
+
+        <div class="topbar-section topbar-menu">
+
+            More
+
+            <img id="arrow" src="image/arrow.png">
+
+        </div>
+
+        <div class="topbar-section">
+
+          <input id="search-box" type="text" value="Search">
+          <input type="image" id="magnifying-glass" src="image/magnifying-glass.png">
+
+        </div>
+
+    </div>
+
+        
+    <div class="clear"></div>
+
+    <div id="menu-bar-container">
+
+        <div id="menu-bar">
+
+            <h1>NEWS</h1>
+
+            <div id="local-news">
+
+               <a href="">Find local news</a>
+
+                <img src="image/pointer.png">
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div id="menu-bar-2-container">
+
+            <div id="menu-bar-2">
+
+                <a href="">Home</a>
+
+                <a href="">India</a>
+
+                <a href="">World</a>
+
+                <a href="">Business</a>
+
+                <a href="">Politics</a>
+
+                <a href="">Tech</a>
+
+                <a href="">Science</a>
+
+                <a href="">Health</a>
+
+                <a href="">Education</a>
+
+                <a href="">Entertainment & Arts</a>
+
+                <a href="">Video & Audio</a>
+
+                <a href="" class="no-border"> More</a>
+
+                <img id="down-arrow" src="image/down-arrow.png">
+
+            </div>
+
+        </div>  
+
+    </div>     
+
+    <div id="clear"></div>
+
+    <div id="page-container">
+
+        <div id="main-artical">
+
+            <h2>Technology</h2>
+
+            <div id="artical-container">
+
+                <h3><a href="   ">North Korea hackers trying to steal <br> nuclear secrets, US and UK warn</a></h3>
+
+                <div id="artical-summery">
+                    <p>A hacking group has been hunting information in areas from uranium enrichment to
+                    tanks and submarines.</p>
+
+                    <p><img class="clock" src="image/clock.png">
+                        <span id="date">July 2024</span>
+                        <a id="topic-link" href="https://www.bbc.com/news/topics/cp3mvpdp1r2t">
+                            <b>Cyber-attacks</b>
+                        </a>
+                    </p>
+
+                    <hr id="article-hr" align="left">
+
+                    <p>US air force bases, Nasa and defence companies are said to have been targeted.</p>
+                    <p><a class="article-link" href="https://www.bbc.com/news/business-68476035">North Korea hacked South Korea chip equipment makers, Seoul says</p>
+                    <p><a class="article-link" href="https://www.bbc.com/news/world-asia-60281129">North Korea: Missile programme funded through stolen crypto, UN report says</p>
+
+                </div>
+
+                <img id="main-artical-image" src="image/cyber.png">
+
+            </div>
+
+        </div>
+
+
+        <div id="explore-more">
+
+            <h4>Explore More</h4>
+
+            <img class="article-side-image" src="image/article1.png">
+
+            <div class="side-article">
+
+                <p><a class="explore-more-link" href="">India win in Sri Lanka 2024 | Twenty20 international</a></p>
+
+                <p><img class="clock" src="image/clock.png">
+                    <span class="date">27 July 2024</span>
+                    <a id="topic-link" href="https://www.bbc.com/sport/cricket/articles/c0xjv61p8vlo">
+                        <b>Sport</b>
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <img class="article-side-image-1" src="image/article2.png">
+
+            <div class="side-article">
+
+                <p><a class="explore-more-link" href="">Dog sparks house fire after chewing power bank</a></p>
+
+                <p><img class="clock" src="image/clock.png">
+                    <span class="date">5 Aug 2024</span>
+                    <a id="topic-link" href="https://www.bbc.com/video">
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+        
+</body>
+
+</html>

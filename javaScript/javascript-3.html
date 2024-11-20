@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+        <P id="text">Hello World!</P>
+
+        <button id="myButton">Click Me</button>
+
+        <p id="secondParagraph"> JavaScript is.....</p>
+
+        <button id="secondButton">Click Me</button>
+
+        <p id="emptyParagraph"></p>
+        <button id="createParagraph">Creat text</button>
+
+    <script type="text/javascript">
+
+        document.getElementById("myButton").onclick = function() {
+
+        document.getElementById("text").innerHTML = "Hello Kartik";
+
+     } 
+
+        document.getElementById("secondButton").onclick = function() {
+        
+         document.getElementById("secondParagraph").innerHTML = "I think" +  document.getElementById("secondParagraph").innerHTML + "awesome";
+
+        }
+
+        document.getElementById("createParagraph").onclick = function() {
+
+        document.getElementById("emptyParagraph").innerHTML = "<h2> My name is Kartik </h2>";
+        }
+
+    </script>
+</body>
+</html>
