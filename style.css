@@ -89,7 +89,8 @@ h1 {
 
 .aboutme-image {
     height: 460px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     background-image: url("assets/shiv.jpeg");
     background-size: cover;
     background-position: center;
