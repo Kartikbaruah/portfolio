@@ -118,15 +118,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: wrap;
+    flex-wrap: wrap;
 }
 
 #projects h2 {
     color: white;
 }
 
-.earth-project,
-.bbc-project {
+.project-card {
     width: 400px;
     height: 400px;
     background: white;
@@ -143,6 +142,18 @@ h1 {
 
 .bbc-project {
     background-image: url("assets/BBC-NEWS.jpeg");
+}
+
+.weather-project {
+    background-image: url("assets/weather-app.jpeg");
+}
+
+.movie-project {
+    background-image: url("assets/movie-app.jpeg");
+}
+
+.ecommerce-project {
+    background-image: url("assets/ecommerce-app.jpeg");
 }
 
 .text {
